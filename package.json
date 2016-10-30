@@ -1,0 +1,26 @@
+{
+  "name": "comic-organiser",
+  "version": "1.0.0",
+  "description": "WebApp to help keep track of comic book collections",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s2880664/mean-stack.git"
+  },
+  "keywords": [
+    "MEAN",
+    "comic"
+  ],
+  "author": "Tully Dwyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s2880664/mean-stack/issues"
+  },
+  "homepage": "https://github.com/s2880664/mean-stack#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
