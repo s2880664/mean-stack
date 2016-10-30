@@ -2,7 +2,7 @@
   "name": "comic-organiser",
   "version": "1.0.0",
   "description": "WebApp to help keep track of comic book collections",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/s2880664/mean-stack#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.2",
     "express": "^4.14.0",
     "mongoose": "^4.6.5"
   }
