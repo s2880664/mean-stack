@@ -3,8 +3,9 @@ var mongoose = require('mongoose'),
 
     var ComicSchema = new Schema({
       //title : { type : String, unique : true, required : true },
-      title : { type: String, required : true},
-      description : String,
+      title : { type: String, required : true, unique : true},
+      description : { type: String, maxlength: 500 },
+      publishDate : Date
     });
 
 mongoose.model('Comic', ComicSchema);

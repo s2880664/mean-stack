@@ -1,16 +1,19 @@
 angular.module('comics').controller('ComicsController', ['$scope', '$routeParams', '$location', 'Comics',
     function($scope, $routeParams, $location, Comics) {
+      $scope.descriptionMaxLength = 500;
+      $scope.titleMaxLength = 50;
 
         $scope.create = function() {
             var comic = new Comics({
                 title: this.title,
-                description: this.description
+                description: this.description,
+                publishDate : this.publishDate
             });
 
             comic.$save(function(response) {
                 $location.path('comics/' + response._id);
             }, function(errorResponse) {
-                $scope.error = errorResponse.data.message;
+                $scope.error = errorResponse.data;
             });
         };
 

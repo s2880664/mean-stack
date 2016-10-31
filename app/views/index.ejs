@@ -2,12 +2,22 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= title %></title>
+    <title>Comic Manager</title>
   </head>
   <body ng-app="comicClient">
-    <a href="#!/comics">Home</a>
-    <a href="#!/comics/create">Add Comic</a>
+
+    <ol class="breadcrumb">
+      <li><a href="#!/home">Home</a></li>
+      <li><a href="#!/comics">Library</a></li>
+      <li><a href="#!/comics/create">Add Comic</a></li>
+    </ol>
+
     <section ng-view class="main-section"></section>
+
+    <link href="/js/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    <script type="css" src="/js/angular/angular.js"></script>
     <script type="text/javascript" src="/js/angular/angular.js"></script>
     <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
