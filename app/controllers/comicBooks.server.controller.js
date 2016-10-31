@@ -1,40 +1,56 @@
-var ComicBook = require('mongoose').model('ComicBook');
+var Comic = require('mongoose').model('Comic');
 
 exports.create = function(req, res, next){
-  var comicBook = new ComicBook(req.body);
-  comicBook.save(function(err){
+  var comic = new Comic(req.body);
+  comic.save(function(err){
     if(err){
       console.log('ERRRRRRRORRR');
       return next(err);
     }
     else{
       console.log('NO ERRROR');
-      res.json(comicBook);
+      res.json(comic);
     }
   });
 };
 
+/*
+var makeMongooseErrorMsgArray = function(err){
+    var msgArray = [];
+    if (err.errors) { // validation errors
+        $.each(err.errors, function (key, val) {
+            msgArray.push(val.message);
+        });
+    } else if (err.message){ // should be execution error without err.errors
+        errLogr.log(err); // log execution errors
+        msgArray.push(err.message);
+    } else {
+        msgArray.push('Unknown error');
+    }
+    return msgArray;
+}
+*/
 exports.list = function(req, res, next) {
-  ComicBook.find({}, function(err, comicBooks) {
+  Comic.find({}, function(err, comics) {
     if(err)
       return next(err);
     else
-      res.json(comicBooks);
+      res.json(comics);
   });
 };
 
 exports.read = function(req, res) {
-  res.json(req.comicBook);
+  res.json(req.comic);
 }
 
-exports.comicbookByID = function(req, res, next, id) {
-  ComicBook.findOne({
+exports.comicById = function(req, res, next, id) {
+  Comic.findOne({
     _id: id},
-    function(err, comicBook) {
+    function(err, comic) {
       if (err)
         return next(err);
       else {
-          req.comicBook = comicBook;
+          req.comic = comic;
           next();
         }
     }
@@ -42,13 +58,26 @@ exports.comicbookByID = function(req, res, next, id) {
 };
 
 exports.update = function(req, res, next) {
-  ComicBook.findByIdAndUpdate(req.comicBook.id, req.body, function(err, comicBook) {
+  Comic.findByIdAndUpdate(req.comic.id, req.body, function(err, comic) {
       if (err)
         return next(err);
       else {
-          req.comicBook = comicBook;
+          req.comic = comic;
           next();
         }
     }
   );
+};
+
+exports.delete = function(req, res) {
+	var comic = req.comic;
+	comic.remove(function(err) {
+		if (err) {
+			return res.status(400).send({
+				message: getErrorMessage(err)
+			});
+		} else {
+			res.json(comic);
+		}
+	});
 };

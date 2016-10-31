@@ -1,0 +1,33 @@
+<div data-ng-controller="ComicsController">
+
+    <section data-ng-init="findOne()" class="container">
+		<h1>Edit Todo</h1>
+		<form data-ng-submit="update()" novalidate class="form-signin">
+			<div>
+				<label for="title">Title</label>
+				<div>
+					<input type="text" data-ng-model="comic.title" id="title" placeholder="Title" required autofocus class="form-control">
+				</div>
+			</div>
+
+			<div>
+				<div>
+					Completed: <input type="checkbox" data-ng-model="comic.completed" ng-checked="comic.completed" name="completed" id="completed" class="form-control" />
+				</div>
+			</div>
+
+			<div>
+				<label for="description" class="sr-only">Comment</label>
+				<div>
+					<textarea data-ng-model="comic.description" id="description" cols="30" rows="10" placeholder="Comment" class="form-control"></textarea>
+				</div>
+			</div>
+			<div>
+				<button type="submit" class="btn btn-lg btn-primary btn-block">Update TODO</button>
+			</div>
+			<div data-ng-show="error">
+				<strong data-ng-bind="error"></strong>
+			</div>
+		</form>
+	</section>
+</div>

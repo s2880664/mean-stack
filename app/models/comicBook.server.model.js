@@ -1,10 +1,10 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-    var ComicBookSchema = new Schema({
+    var ComicSchema = new Schema({
       //title : { type : String, unique : true, required : true },
-      title : String,
+      title : { type: String, required : true},
       description : String,
     });
 
-mongoose.model('ComicBook', ComicBookSchema);
+mongoose.model('Comic', ComicSchema);

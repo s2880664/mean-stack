@@ -1,0 +1,30 @@
+<div data-ng-controller="ComicsController">
+
+    <section class="container">
+		<h1>New Comic</h1>
+		<form class="form-signin" data-ng-submit="create()" novalidate>
+
+			<div>
+				<label for="title">Title</label>
+				<div>
+					<input type="text" data-ng-model="title" id="title" placeholder="Title" required autofocus class="form-control">
+				</div>
+			</div>
+
+			<div>
+				<label for="description" class="sr-only">Comment</label>
+				<div>
+					<textarea data-ng-model="description" id="description" cols="30" rows="10" placeholder="Description" class="form-control"></textarea>
+				</div>
+			</div>
+
+			<div>
+				<button type="submit" class="btn btn-lg btn-primary btn-block">Add Comic Book</button>
+			</div>
+
+			<div data-ng-show="error">
+				<strong data-ng-bind="error"></strong>
+			</div>
+		</form>
+	</section>
+</div>

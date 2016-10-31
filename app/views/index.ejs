@@ -4,10 +4,19 @@
     <meta charset="utf-8">
     <title><%= title %></title>
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <img src="img/logo.png" alt="logoo" />
+  <body ng-app="comicClient">
+    <a href="#!/comics">Home</a>
+    <a href="#!/comics/create">Add Comic</a>
+    <section ng-view class="main-section"></section>
+    <script type="text/javascript" src="/js/angular/angular.js"></script>
+    <script type="text/javascript" src="/js/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/js/angular-resource/angular-resource.min.js"></script>
+
+    <script type="text/javascript" src="/comics/comics.client.module.js"></script>
+    <script type="text/javascript" src="/comics/controllers/comics.client.controller.js"></script>
+    <script type="text/javascript" src="/comics/services/comics.client.service.js"></script>
+    <script type="text/javascript" src="/comics/config/comics.client.routes.js"></script>
+
+    <script type="text/javascript" src="/application.js"></script>
   </body>
-  <script type="text/javascript" src="/example/example.client.module"></script>
-  <script type="text/javascript" src="/js/angular/angular.js"></script>
 </html>
