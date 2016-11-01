@@ -4,35 +4,35 @@
     <h1>Edit Comic</h1>
     <form data-ng-submit="update()" novalidate class="form-signin">
 
-      <div>
+      <div class="padding">
         <label for="title">Title</label>
         <div>
           <input type="text" data-ng-model="comic.title" id="title" placeholder="Title" required autofocus class="form-control">
         </div>
       </div>
 
-      <div>
+      <div class="padding">
         <label for="description" class="sr-only">Comment</label>
         <div>
           <textarea data-ng-model="comic.description" id="description" cols="30" rows="10" placeholder="Comment" class="form-control"></textarea>
         </div>
       </div>
 
-      <div>
+      <div class="padding">
         <label for="publishDate">Date Published</label>
         <div>
           <input type="date" data-ng-model="publishDate" id="publishDate">
         </div>
       </div>
 
-      <div>
+      <div class="padding">
         <button type="submit" class="btn btn-lg btn-primary btn-block">Update Comic</button>
       </div>
 
       <div data-ng-show="error">
         <strong data-ng-bind="error"></strong>
       </div>
-      
+
     </form>
   </section>
 </div>
