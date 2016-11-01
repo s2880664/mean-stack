@@ -6,20 +6,20 @@ Simple comicbook webapp built using MEAN fullstack Javascript framework  + RESTf
 
 * MongoDB (3.2)
 * Node.js (Latest)
+* Bower (Latest)
 
 ## How to run
 
 1. Install development environment requirements listed in previous section.
-1. Clone or download project.
-2. Navigate to project root folder.
-2. Install NPM packages ``` npm install ```
-3. Install Bower packages ``` bower install ```
-2. Start MongoDB process. (Run mongod.exe)
-3. Populate database by running 'populateDatabase.js' file located in root directory of project. ``` node populateDatabase.js ```
-4. Start server with node.js by running 'server.js' file located in root directory of project. ``` node server.js ```
-5. Access webapp with prefered browser via localhost and port 3000 ``` http://localhost:3000/ ```
-## Features
+2. Clone or download project.
+3. Navigate to project root folder.
+4. Install NPM packages ``` npm install ```
+5. Start MongoDB process. (Run mongod.exe)
+6. Populate database by running 'populateDatabase.js' file located in root directory of project. ``` node populateDatabase.js ```
+7. Start server with node.js by running 'server.js' file located in root directory of project. ``` node server.js ```
+8. Access webapp with prefered browser via localhost and port 3000 ``` http://localhost:3000/ ```
 
+## Features
 ### RESTful API (JSON)
 
 The API can be accessed via HTTP.
