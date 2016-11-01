@@ -1,37 +1,37 @@
 <div data-ng-controller="ComicsController">
+  <section class="container">
+    
+    <h1>New Comic</h1>
+    <form name="myForm" class="form-signin" data-ng-submit="create()" novalidate>
 
-    <section class="container">
-		<h1>New Comic</h1>
-		<form name="myForm" class="form-signin" data-ng-submit="create()" novalidate>
-
-			<div>
-				<label for="title">Title <small>Characters left: {{titleMaxLength - title.length}}</small></label>
-				<div>
-					<input type="text" data-ng-model="title" ng-Maxlength="{{titleMaxLength}}" id="title" placeholder="Title" required autofocus class="form-control">
+      <div class="padding">
+        <label for="title">Title <small>Characters left: {{titleMaxLength - title.length}}</small></label>
+        <div>
+          <input type="text" data-ng-model="title" ng-Maxlength="{{titleMaxLength}}" id="title" placeholder="Title" required autofocus class="form-control">
         </div>
-			</div>
+      </div>
 
-			<div>
-				<label for="description">Description <small>Characters left: {{descriptionMaxLength - description.length}}</small></label>
-				<div>
-					<textarea data-ng-model="description" ng-Maxlength="{{descriptionMaxLength}}" id="description" cols="30" rows="10" placeholder="Description" class="form-control"></textarea>
+      <div class="padding">
+        <label for="description">Description <small>Characters left: {{descriptionMaxLength - description.length}}</small></label>
+        <div>
+          <textarea data-ng-model="description" ng-Maxlength="{{descriptionMaxLength}}" id="description" cols="30" rows="10" placeholder="Description" class="form-control"></textarea>
         </div>
-			</div>
+      </div>
 
-      <div>
-				<label for="publishDate">Date Published</label>
-				<div>
-					<input type="date" data-ng-model="publishDate" id="publishDate">
+      <div class="padding">
+        <label for="publishDate">Date Published</label>
+        <div>
+          <input type="date" data-ng-model="publishDate" id="publishDate">
         </div>
-			</div>
-      {{myForm.$valid}}
-			<div>
-				<button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="myForm.$invalid">Add Comic Book</button>
-			</div>
+      </div>
 
-			<div data-ng-show="error">
-				<strong data-ng-bind="error"></strong>
-			</div>
-		</form>
-	</section>
+      <div class="padding">
+        <button type="submit" class="btn btn-lg btn-primary btn-block" ng-disabled="myForm.$invalid">Add Comic Book</button>
+      </div>
+
+      <div data-ng-show="error">
+        <strong data-ng-bind="error"></strong>
+      </div>
+    </form>
+  </section>
 </div>

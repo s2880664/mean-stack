@@ -2,8 +2,8 @@ var appName = 'comicClient';
 var app = angular.module(appName, ['ngResource', 'ngRoute', 'comics']);
 
 app.config(['$locationProvider', function($locationProvider) {
-        $locationProvider.hashPrefix('!');
-    }
+  $locationProvider.hashPrefix('!');
+}
 ]);
 
 if (window.location.hash === '#_=_') window.location.hash = '#!';

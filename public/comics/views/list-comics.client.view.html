@@ -1,26 +1,39 @@
 <div data-ng-controller="ComicsController">
+  <section data-ng-init="find()">
+    <div class="container">
 
-    <section data-ng-init="find()">
-		<div class="container">
-			<h1>Comics</h1>
+      <h1>Comics</h1>
+      <label>Filter: <input ng-model="searchText"></label>
 
-      <label>Search: <input ng-model="searchText"></label>
-
-      <table id="searchTextResults" class="table table-hover">
-        <tr><th>Title</th><th>Description</th><th>Publish Date</th></tr>
-        <tr ng-repeat="comic in comics | filter:searchText">
-          <td><a data-ng-href="#!/comics/{{comic._id}}" data-ng-bind="comic.title"></a></td>
-          <td><small data-ng-bind="comic.description" class="description"></small></td>
-          <td>{{comic.publishDate | date:"MM/dd/yyyy"}}</td>
-        </tr>
+      <table id="searchTextResults" class="table table-hover comic-table">
         <tr>
-          <td><a href="#!/comics/create">+ Add Comic</a></td>
-        </tr>
-      </table>
+          <th>
+            <a ng-click="sortBy('title')">Title
+              <span class="sortorder" ng-show="propertyName === 'title'" ng-class="{reverse: reverse}"></span></a>
+            </th>
+            <th>
+              <a ng-click="sortBy('description')">Description
+                <span class="sortorder" ng-show="propertyName === 'description'" ng-class="{reverse: reverse}"></span></a>
+              </th>
+              <th>
+                <a ng-click="sortBy('publishDate')">Publish Date
+                  <span class="sortorder" ng-show="propertyName === 'publishDate'" ng-class="{reverse: reverse}"></span></a>
+                </th>
+              </tr>
+              <tr ng-repeat="comic in comics | filter:searchText">
+                <td><a data-ng-href="#!/comics/{{comic._id}}" data-ng-bind="comic.title"></a></td>
+                <td><small data-ng-bind="comic.description" class="description"></small></td>
+                <td>{{comic.publishDate | date:"dd/MM/yyyy"}}</td>
+              </tr>
+              <tr>
+                <td><a href="#!/comics/create">+ Add Comic</a></td>
+              </tr>
+            </table>
 
-			<div data-ng-hide="!comics || comics.length">
-				No comics yet, why don't you <a href="/#!/comics/create">create one</a>?
-			</div>
-		</div>
-	</section>
-</div>
+            <div data-ng-hide="!comics || comics.length">
+              No comics yet, why don't you <a href="/#!/comics/create">create one</a>?
+            </div>
+            
+          </div>
+        </section>
+      </div>

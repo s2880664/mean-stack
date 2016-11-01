@@ -1,6 +1,9 @@
 angular.module('comics').config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+        when('/', {
+    			templateUrl: 'comics/views/list-comics.client.view.html'
+    		}).
         when('/comics', {
     			templateUrl: 'comics/views/list-comics.client.view.html'
     		}).
