@@ -1,5 +1,7 @@
 # mean-stack
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tullydwyer/mean-stack.svg)](https://greenkeeper.io/)
+
 Simple comicbook webapp built using MEAN fullstack Javascript framework  + RESTful API
 
 ## Requirments
