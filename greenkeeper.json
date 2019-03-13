@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "public/js/angular-resource/package.json",
+        "public/js/angular-route/package.json",
+        "public/js/angular/package.json",
+        "public/js/bootstrap/package.json"
+      ]
+    }
+  }
+}
