@@ -1,6 +1,6 @@
 # mean-stack
 
-[![Build Status](https://travis-ci.org/tullydwyer/mean-stack.svg?branch=master)](https://travis-ci.org/tullydwyer/mean-stack)
+[![Build Status](https://travis-ci.org/tullydwyer/mean-stack.svg?branch=master)](https://travis-ci.org/tullydwyer/mean-stack) [![Greenkeeper badge](https://badges.greenkeeper.io/tullydwyer/mean-stack.svg)](https://greenkeeper.io/)
 
 Simple comicbook webapp built using MEAN fullstack Javascript framework  + RESTful API
 
