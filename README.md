@@ -1,5 +1,7 @@
 # mean-stack
 
+[![Build Status](https://travis-ci.org/tullydwyer/mean-stack.svg?branch=master)](https://travis-ci.org/tullydwyer/mean-stack)
+
 Simple comicbook webapp built using MEAN fullstack Javascript framework  + RESTful API
 
 ## Requirments
