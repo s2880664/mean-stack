@@ -4,7 +4,7 @@
   "description": "WebApp to help keep track of comic book collections",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm install"
   },
   "repository": {
     "type": "git",
